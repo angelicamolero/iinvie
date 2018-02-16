@@ -3,6 +3,7 @@
 	<head>
 		<title> Invie - Tus mejores guitarras! </title>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 		<link rel="stylesheet" href="css/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Allerta" rel="stylesheet">
 	</head>
@@ -15,7 +16,8 @@
 				<img src="img/invie.png" width="186" height="60" alt="Invie logotipo">
 			</figure>
 			<!-- menu -->
-			<nav class="menu">
+			<span class="burger-button icon-menu" id="burger"></span>
+			<nav class="menu" id="menu">
 				<ul>
 					<li>
 						<a href="index.html">Home</a>
@@ -121,5 +123,32 @@
 				</form> <!-- formulario -->
 			</div>
 		</footer>
+
+		<script>
+			var consulta=window.matchMedia('(max-width:800px)');
+			consulta.addListener(mediaQuery);
+			var $burger = document.getElementById('burger');
+			var $menu = document.getElementById('menu');
+
+			function mediaQuery(){
+				if (consulta.matches){
+					console.log('se cumple');
+					$burger.addEventListener('touchstart', toggleMenu);
+
+				}else {
+					$burger.addEventListener('touchstart', toggleMenu);
+
+					console.log('no se cumple');
+				}
+			}
+			
+				
+				function toggleMenu(){
+				$menu.classList.toggle('active');
+				$burger.classList.toggle('icon-cross');
+			}
+				
+			
+		</script>
 	</body>
 </html>

@@ -1,3 +1,45 @@
+/*  Fonts*/
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?vch12l');
+  src:  url('../fonts/icomoon.eot?vch12l#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?vch12l') format('truetype'),
+    url('../fonts/icomoon.woff?vch12l') format('woff'),
+    url('../fonts/icomoon.svg?vch12l#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-phone:before {
+  content: "\e942";
+}
+.icon-envelop:before {
+  content: "\e945";
+}
+.icon-menu:before {
+  content: "\e9bd";
+}
+.icon-cross:before {
+  content: "\ea0f";
+}
+
+
 body{
 	font-family: 'Allerta', sans-serif;
 	margin: 0;
@@ -239,6 +281,21 @@ flex-direction: column;
 	margin: 50px 0;
 }
 
+.burger-button {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 50%;
+	display: inline-block;
+	text-align: center;
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	cursor: pointer;
+	z-index: 3;
+
+}
+
 @media screen and (max-width: 800px) {
 
 	.titulo {
@@ -357,6 +414,33 @@ flex-direction: column;
 }
 
 @media screen and (max-width: 450px){
+	/*.burger-button {
+		display: inline-block;
+	}*/
+
+	.portada .contenedor {
+		position: static;
+	}
+
+	.menu{
+		background: rgba(255,60,88, .8);
+		position: absolute;
+		left: 0;
+		top:0;
+		bottom: 0;
+		right: 0;
+		z-index: 2;
+		display: flex;
+		align-items: center;
+		width: 100%;
+		left: -100%;
+		transition: 3ms;
+	}
+
+	.menu.active {
+		left: 0;
+	}
+
 	.menu li {
 		display: block;
 		margin: 0;
@@ -367,6 +451,10 @@ flex-direction: column;
 	.menu li:first-child {
 		border-top: 1px solid white;
 	}
+
+    .menu ul {
+    	flex: 1;
+    }
 	.portada {
 		text-align: center;
 	}
