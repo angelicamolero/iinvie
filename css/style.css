@@ -263,6 +263,7 @@ flex-direction: column;
 
 .col2 .button {
 	margin-top: 15px;
+	margin-left: 100px;
 }
 
 .intereses label {
