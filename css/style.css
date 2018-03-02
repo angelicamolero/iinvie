@@ -263,7 +263,7 @@ flex-direction: column;
 
 .col2 .button {
 	margin-top: 15px;
-	margin-left: 100px;
+	
 }
 
 .intereses label {
@@ -535,7 +535,9 @@ flex-direction: column;
 		margin-bottom: 10px;
 	}
 
-	 
+	 .col2 .button {
+	margin-left: 100px;
+    }
 } 
 
 @media screen and(-webkit-min-device-pixel-ratio: 2){
