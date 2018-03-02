@@ -263,6 +263,7 @@ flex-direction: column;
 
 .col2 .button {
 	margin-top: 15px;
+
 }
 
 .intereses label {
@@ -389,7 +390,9 @@ flex-direction: column;
   	margin-bottom: 30px;
   }
 
-  
+  .col2 .button {
+    margin-left: 115px;
+  }
 
 }
 
@@ -530,6 +533,9 @@ flex-direction: column;
 	}
 	.contacto img{
 		margin-bottom: 10px;
+	}
+	.col2 .button {
+		margin-left: 100px;
 	}
 
 	 
